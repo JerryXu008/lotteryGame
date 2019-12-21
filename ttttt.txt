@@ -1,0 +1,6 @@
+awards
+members
+result
+batchNumber
+choosed
+players
