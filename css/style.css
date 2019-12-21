@@ -3,7 +3,7 @@ body {
   height: 100%;
 }
 .bg {
-  /* background-image: url(../img/bg1.png); */
+  background-image: url(../img/bg1.png); 
   
   
   /* overflow: hidden; */
@@ -12,7 +12,7 @@ body {
   background-size: cover ;
   background-position: center center;
   background-repeat: no-repeat; */
-
+  background-color:red;
   overflow: hidden;
   height: 100%;
   position: absolute;
