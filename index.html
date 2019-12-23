@@ -8,6 +8,7 @@
     <title>年会抽奖</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
     <link
       rel="stylesheet"
       href="./js/element-ui@2.4.11/lib/theme-chalk/index.css"
@@ -18,35 +19,68 @@
     <script src="./js/element-ui@2.4.11/lib/index.js"></script>
     <script src="./js/member.js"></script>
     <script src="./js/awards.js"></script>
+    <!-- <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.fireworks.js"></script> -->
+
     <style>
     .restStart{
       position: absolute;
       right: 30px;
       top: 0;
     }
+
+    .fade-enter,
+        .fade-leave{
+          opacity: 0;
+     }
+        .fade-enter-active,
+        .fade-leave-active{
+            transition:opacity 2s;
+        }
+ 
     </style>
   </head>
 
 
 
   <body>
+  
     <div id="app" class="bg">
      
       <div class="next title" v-if="awards.length>0">
-        <span class="title">{{ awards[currentAward].name }}({{result[currentAward].length}}/{{
+        <!-- <span class="title">{{ awards[currentAward].name }}({{result[currentAward].length}}/{{
           awards[currentAward].count
-        }})</span> 
+        }})</span>  -->
+        <span class="title">{{ awards[currentAward].name }}</span> 
+
         <span v-show="awards[currentAward].award"
           > 奖品：<span style="color:yellow">{{ awards[currentAward].award }}</span></span
         >
       </div>
       <!-- 中奖人数 集合-->
       <div class="batch flexbox" v-show="!running && batchPlayers.length>0">
+      <transition
+      :duration="{enter:3000,leave:3000}"    
+      name="fade"
+      appear    
+      appear-active-class="animated swing"
+      enter-active-class="animated swing fade-enter-active"
+      leave-active-class="animated shake fade-leave-active"
+     >
        
-        <div class="player" v-for="(item, index) in batchPlayers" :key="index" @click="onKick(item)">
-          {{ item.name }}  
-        </div>
+       
+      <div class="player" v-show="!running && batchPlayers.length>0" v-for="(item, index) in batchPlayers" :key="index" @click="onKick(item)">
+        <p>{{ item.department }}  </p>
+        <p>{{ item.name }}  </p>
+        
       </div>
+    
+
+     </transition>
+    </div>
+
+     
+
       
       <div class="result" v-show="result[currentAward].length>0">
         <div
@@ -112,11 +146,25 @@
         <el-button class="restStart" size="small" @click="resetAll">重新开始</el-button>
       </div>
     </div>
-
+    
+      <!-- 烟花效果 -->
+    <!-- <div class="yanhua"></div> -->
 
 
 
     <script type="text/javascript">
+    alert(111);
+      // setTimeout(function(){
+         
+      //   $('#app').fireworks({
+      //       sound: false,
+      //       opacity: 0.9,
+      //       width: '100%',
+      //       height: '100%'
+      //   });
+      // },1000);
+     
+
       new Vue({
         el: '#app',
         data: {

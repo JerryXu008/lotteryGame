@@ -64,18 +64,51 @@ a {
   transform: translate(-50%, -50%);
 }
 .player {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: relative;
   display: inline-block;
   text-align: center;
   font-size: 25px;
-  width: 150px;
+  /* width: 250px; */
+  width:500px;
+  height: 318px;
   background: #fff;
-  line-height: 30px;
+  
   color: #000;
   margin: 5px;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;  
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
   padding: 10px 0;
+  /* background-image: url(../img/luckyDogBG.jpeg); 
+  background-size: cover  ; */
+
+  background: url(../img/luckyDogBG2.jpeg) no-repeat; 
+  background-size: cover;
+
 }
+.player p {
+  color: #fff;
+  left: 50px;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+}
+.player p:nth-child(1){
+   
+  top: 80px;
+  /* line-height: 50px; */
+ 
+}
+.player p:nth-child(2){
+  top: 130px;
+  line-height: 70px;
+   color: yellow;
+  
+}
+
 
 .lucky-dog {
   display: inline-block;
