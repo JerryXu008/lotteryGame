@@ -96,18 +96,23 @@ a {
   text-align: center;
   width: 150px;
 }
+ 
 .player p:nth-child(1){
    
   top: 80px;
   /* line-height: 50px; */
+  transition:all 0.1s;
+  text-shadow:1px 1px 1px #00FF00;
+  color: #fff;
  
 }
 .player p:nth-child(2){
   top: 130px;
   line-height: 70px;
-   color: #000;
+   color:yellow;
    font-size: 45px;
-  
+   transition:all 0.1s;
+text-shadow:1px 1px 1px #00FF00;
 }
 
 
