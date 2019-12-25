@@ -104,6 +104,7 @@ a {
   transition:all 0.1s;
   text-shadow:1px 1px 1px #00FF00;
   color: #fff;
+  color:#ffff99;
  
 }
 .player p:nth-child(2){
