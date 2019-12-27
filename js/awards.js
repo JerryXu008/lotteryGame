@@ -1,17 +1,27 @@
 window.awards =  [
+  {
+    name: '四等奖',
+    award: '米老鼠吉祥物',
+    count: 40,
+   }, 
+  {
+    name: '三等奖',
+    award: '小艾音响',
+    count: 15,
+   }, 
     {
      name: '二等奖',
-     award: '办公室一日游',
-     count: 500,
+     award: '烤箱',
+     count: 6,
     }, 
    {
        name: '一等奖',
-       award: 'BMW X5',
-       count: 500,
+       award: 'GT手表',
+       count: 2,
      },
      {
-       name: '特等奖',
-       award: 'iPhone 11 Pro Max',
+       name: '幸运奖',
+       award: '',
        count: 500,
      },
    ];

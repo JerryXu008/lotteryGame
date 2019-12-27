@@ -58,8 +58,8 @@
         >
       </div>
       <!-- 中奖人数 集合-->
-      <div class="batch flexbox" v-show="!running && batchPlayers.length>0">
-      <transition
+      <div v-if="(currentAward==2 || currentAward==3 || currentAward==4)" class="batch flexbox" v-show="!running  && batchPlayers.length>0">
+     <transition
       :duration="{enter:3000,leave:3000}"    
       name="fade"
       appear    
@@ -67,22 +67,30 @@
       enter-active-class="animated swing fade-enter-active"
       leave-active-class="animated shake fade-leave-active"
      >
-       
-       
-      <div class="player" v-show="!running && batchPlayers.length>0" v-for="(item, index) in batchPlayers" :key="index" @click="onKick(item)">
+        <div class="player" v-show="!running && batchPlayers.length>0" v-for="(item, index) in batchPlayers" :key="index" @click="onKick(item)">
         <p>{{ item.department }}  </p>
         <p>{{ item.name }}  </p>
         
       </div>
-    
-
      </transition>
     </div>
+     <div class="batch" v-else-if="(currentAward==0 || currentAward==1)">
+      
+      <div class="lucky-dog subDog" v-show="!running && batchPlayers.length>0" v-for="(item, index) in batchPlayers" :key="index" @click="onKick(item)">
+        <p>{{ item.department }}  </p>
+        <p>{{ item.name }}  </p>
+        
+      </div>
+     </div>
+     <div v-else>
+
+     </div>
 
      
 
       
-      <div class="result" v-show="result[currentAward].length>0">
+      <!-- <div class="result" v-show="result[currentAward].length>0">
+        
         <div
           @click="onKick(item, index)"
           class="lucky-dog"
@@ -91,7 +99,7 @@
         >
           {{ item.name }}
         </div>
-      </div>
+      </div> -->
       
 
       
@@ -131,7 +139,7 @@
         }}</el-button>
 
 
-        <el-button size="small" @click="onNext" :disabled="goOn || running">下一轮</el-button>
+        <el-button ref="buttonNext" size="small" @click="onNext" :disabled="goOn || running">下一轮</el-button>
         <el-button
           size="small"
           :disabled="running"
@@ -242,9 +250,19 @@
              
            
             var batchPlayers = [];
-           
+            var Num = 1;
+            if(this.currentAward == 2 || this.currentAward == 3 || this.currentAward==4){
+              Num = 1;
+            }
+            else if(this.currentAward == 0){
+              Num = 10;
+            }
+            else if(this.currentAward == 1){
+              Num = 5;
+            }
            // for (var i = 0, ln = Math.min(N, todo, this.players.length); i < ln; i++) {
-            for (var i = 0, ln = 1; i < ln; i++) {
+            for (var i = 0, ln = Num; i < ln; i++) {
+               
               //得到随机 员工索引
               var index = this.getRandomInt(0, this.players.length - 1);
               //中奖者加入，并且从players中移除
@@ -252,6 +270,7 @@
             }
             //中奖者
             this.batchPlayers = batchPlayers;
+            
             //保存的是中奖人的对象
             //删除以前的索引，然后在以前的索引上添加新的数组,就是中奖人的数组
             this.result.splice(
@@ -267,11 +286,18 @@
           },
          
          
-          onNext: function() {
+          onNext: function(e) {
+             console.log(e);
+
             this.batchPlayers = [];
             if (this.currentAward < this.awards.length - 1) {
                this.currentAward += 1;
             }
+            setTimeout(()=>{
+             // alert(this.$refs.buttonNext.$el);
+              this.$refs.buttonNext.$el.blur();
+            },500);
+            
           },
          
           getRandomInt: function(min, max) {
@@ -340,10 +366,12 @@
             });
           },
           onKeyup: function(e) {
-            console.log(e);
+           // console.log(e);
             // 空格或回车键
             if (e.keyCode === 13 || e.keyCode === 32) {
+              console.log(this.$refs.action.$el);
               this.$refs.action.$el.click();
+           
             }
           },
           copy: function(obj) {

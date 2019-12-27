@@ -63,6 +63,15 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.playerMore {
+   margin:  auto;
+   display: flex; 
+   justify-content: center; 
+   align-items: center;
+   width: 250px; 
+   background-color:green;
+}
+
 .player {
   /* display: flex; */
   /* justify-content: center; */
@@ -115,7 +124,13 @@ a {
    transition:all 0.1s;
 text-shadow:1px 1px 1px #00FF00;
 }
-
+.subDog {
+  width: 120px !important; 
+}
+.subDog p{
+  text-shadow:1px 1px 1px yellow;
+  color:black;
+}
 
 .lucky-dog {
   display: inline-block;
