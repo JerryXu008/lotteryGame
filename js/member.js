@@ -1,9 +1,5 @@
 window.members = [
-	{
-    id:"1",
-		"department":"测试部",
-		"name":"郑秀军"
-	},
+	 
 	{
     id:"2",
 		"department":"测试部",
@@ -121,11 +117,7 @@ window.members = [
 		"department":"测试部",
 		"name":"吉中柱"
 	},
-	{
-    id:"31",
-		"department":"技术工程一部",
-		"name":"石进兵"
-	},
+	 
 	{
     id:"32",
 		"department":"技术工程一部",
@@ -187,11 +179,7 @@ window.members = [
 		"department":"技术工程一部",
 		"name":"王全美"
 	},
-	{
-    id:"47",
-		"department":"技术工程二部",
-		"name":"殷萌萌"
-	},
+	 
 	{
     id:"48",
 		"department":"技术工程二部",
@@ -209,21 +197,9 @@ window.members = [
 		"department":"技术工程二部",
 		"name":"孙传昊"
 	},
-	{
-    id:"52",
-		"department":"TPM部",
-		"name":"尹玉田"
-	},
-	{
-    id:"53",
-		"department":"TPM部",
-		"name":"谢兴华"
-	},
-	{
-    id:"54",
-		"department":"TPM部",
-		"name":"辛福成"
-	},
+	 
+	 
+	 
 	{
     id:"55",
 		"department":"TPM部",
@@ -279,11 +255,7 @@ window.members = [
 		"department":"TPM部",
 		"name":"任正"
 	},
-	{
-    id:"66",
-		"department":"中试处",
-		"name":"王目鹏"
-	},
+	 
 	{
     id:"67",
 		"department":"中试处",
@@ -424,11 +396,7 @@ window.members = [
 		"department":"中试处",
 		"name":"刘成"
 	},
-	{
-    id:"95",
-		"department":"产品分析改善部",
-		"name":"尚亚朋"
-	},
+	 
 	{
     id:"96",
 		"department":"产品分析改善部",
@@ -494,11 +462,7 @@ window.members = [
 		"department":"装备开发部",
 		"name":"张春春"
 	},
-	{
-    id:"109",
-		"department":"装备开发部",
-		"name":"王景岳"
-	},
+	 
 	{
     id:"110",
 		"department":"装备开发部",
