@@ -260,8 +260,8 @@
             else if(this.currentAward == 1){
               Num = 5;
             }
-           // for (var i = 0, ln = Math.min(N, todo, this.players.length); i < ln; i++) {
-            for (var i = 0, ln = Num; i < ln; i++) {
+            for (var i = 0, ln = Math.min(Num, todo, this.players.length); i < ln; i++) {
+          //  for (var i = 0, ln = Num; i < ln; i++) {
                
               //得到随机 员工索引
               var index = this.getRandomInt(0, this.players.length - 1);
