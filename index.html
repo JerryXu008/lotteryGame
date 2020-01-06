@@ -69,6 +69,7 @@
      >
         <div class="player" v-show="!running && batchPlayers.length>0" v-for="(item, index) in batchPlayers" :key="index" @click="onKick(item)">
         <p>{{ item.department }}  </p>
+        <!-- <p>产品分析改善部  </p> -->
         <p>{{ item.name }}  </p>
         
       </div>

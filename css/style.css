@@ -108,13 +108,13 @@ a {
  
 .player p:nth-child(1){
    
-  top: 80px;
+  top: 90px;
   /* line-height: 50px; */
   transition:all 0.1s;
   text-shadow:1px 1px 1px #00FF00;
   color: #fff;
   color:#ffff99;
- 
+  font-size: 20px;
 }
 .player p:nth-child(2){
   top: 130px;
@@ -131,6 +131,8 @@ text-shadow:1px 1px 1px #00FF00;
   text-shadow:1px 1px 1px yellow;
   color:black;
 }
+ 
+
 
 .lucky-dog {
   display: inline-block;
