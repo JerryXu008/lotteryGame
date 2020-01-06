@@ -1,8 +1,8 @@
 window.awards =  [
   {
     name: '四等奖',
-    award: '米老鼠吉祥物',
-    count: 40,
+    award: '蚕丝被',
+    count: 20,
    }, 
   {
     name: '三等奖',
