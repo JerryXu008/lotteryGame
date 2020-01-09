@@ -294,7 +294,7 @@ window.members = [
 	{
     id:"74",
 		"department":"中试处",
-		"name":"王占忠"
+		"name":"周芳旭"
 	},
 	{
     id:"75",
@@ -628,4 +628,14 @@ window.members = [
 		"department":"装备开发部",
 		"name":"张艳明"
 	},
+	{
+		id:"143",
+			"department":"TPM",
+			"name":"王强"
+		},
+		{
+			id:"144",
+				"department":"产品分析改善部",
+				"name":"张强强"
+			},
 ]
