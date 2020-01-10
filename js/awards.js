@@ -6,7 +6,7 @@ window.awards =  [
    }, 
   {
     name: '三等奖',
-    award: '小艾音响',
+    award: '小爱音响',
     count: 15,
    }, 
     {
